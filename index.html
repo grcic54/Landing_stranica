@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <title>Raspored sati</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body>
+
+ <body class = "bg-linear-to-r from-gray-100 to-gray-300 dark:bg-linear-to-r dark:from-gray-700 dark:to-gray-800 text-gray-900  dark:text-gray-200">
+
+        <header class="flex items-center justify-between p-4 bg-linear-to-r from-gray-300 to-gray-100 dark:bg-linear-to-r dark:from-gray-800 dark:to-gray-700">
+
+            <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full ">
+            <a href="#" class="focus-ring rounded-sm text-xl font-bold text-sboja dark:text-gboja">Raspored sati</a>
+            </div>
+            <nav class="flex gap-4">
+                 <a href="#A" class="focus-ring rounded-sm hover:dark:text-gboja hover:text-sboja">Uistinu</a>
+                 <a href="#login" class="focus-ring rounded-sm hover:dark:text-gboja hover:text-sboja">Prijava</a>
+            </nav>
+        </header>
+
+
+        <main class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <section id="Raspored" class="lg:col-span-4">
+
+
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold m-5">Raspored sati</h1>
+        
+            <div class="p-6 bg-linear-to-r from-gray-300/50 to-gray-100/50 dark:bg-linear-to-r dark:from-gray-800/50 dark:to-gray-700/50 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-sboja  dark:text-gboja">28.9. </h2>
+            <h2 class="text-lg font-semibold mb-2 ">Jutarnja smjena</h2>
+            <div id = "kartice" class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto"></div>
+            </div>
+            <template id = "kartica">
+                <article class="card flex flex-col">
+                    <h2 class="text-lg font-semibold mb-2 text-sboja dark:text-gboja"></h2>
+                    <p class="flex-1 mt-2 text-gray-600 dark:text-gray-400"></p>
+                    <a href="#" class="btn-primary">Otvori</a>
+                </article>
+            </template>
+
+            <script>
+
+                const raspored = [
+                    ["Ponedjeljak", "Sati: 7"],
+                    ["Utorak", "Sati: 8"],
+                    ["Srijeda", "Sati: 8"],
+                    ["Četvrtak", "Sati: 7"],
+                    ["Petak", "Sati: 7"]
+                ];
+
+                for (const [naslov, opis] of raspored) {
+        const kopija = document.querySelector("#kartica").content.cloneNode(true);
+        kopija.querySelector("h2").textContent = naslov;
+        kopija.querySelector("p").textContent = opis;
+        document.querySelector("#kartice").append(kopija);
+                }
+
+            </script>
+
+        </div>
+
+        </section>
+        </main>
+
+
+  <footer id ="kontakt" class="p-6 text-center text-sm text-sboja dark:text-gboja">
+            nešto@exmple.com &copy; 2026 Nešto
+        </footer>
+
+</body>
+</body>
+</html> 

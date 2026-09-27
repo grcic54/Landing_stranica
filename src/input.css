@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+    --color-gboja: oklch(0.4441 0.1751 33.88);
+    --color-sboja: oklch(0.7 0.1 164);
+    --radius-card: 0.75rem;
+}
+
+@utility focus-ring{
+    @apply focus-visible:outline-hidden focus-visible:ring-4 focus-visible:ring-sboja/50 dark:focus-visible:ring-gboja;
+}
+
+@utility btn-primary{
+    @apply focus-ring block rounded-sm bg-sboja dark:bg-gboja px-4 py-2 text-center font-semibold text-white m-2; 
+    &:hover {
+        @apply brightness-80;
+    }
+}
+
+@utility card{
+    @apply rounded-card  bg-white p-6 shadow-sm transition duration-300 dark:bg-slate-800;
+    &:hover {
+        @apply -translate-y-1 shadow-lg;
+    }
+}
