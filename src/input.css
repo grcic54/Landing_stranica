@@ -7,7 +7,7 @@
 }
 
 @utility focus-ring{
-    @apply focus-visible:outline-hidden focus-visible:ring-4 focus-visible:ring-sboja/50 dark:focus-visible:ring-gboja;
+    @apply focus-visible:outline-hidden focus-visible:ring-4 focus-visible:ring-sboja/50 dark:focus-visible:ring-gboja/50;
 }
 
 @utility btn-primary{
@@ -18,7 +18,7 @@
 }
 
 @utility card{
-    @apply rounded-card  bg-white p-6 shadow-sm transition duration-300 dark:bg-slate-800;
+    @apply rounded-card  bg-white p-6 shadow-sm transition duration-300 dark:bg-gray-800;
     &:hover {
         @apply -translate-y-1 shadow-lg;
     }
